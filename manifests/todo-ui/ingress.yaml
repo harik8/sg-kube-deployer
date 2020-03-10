@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: todo-ui
+  namespace: todo
+spec:
+  rules:
+  - host: todo.hari-karthigasu.dev
+    http:
+      paths:
+      - path: /ui
+        backend:
+          serviceName: todo-ui
+          servicePort: 8080
