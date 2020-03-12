@@ -3,7 +3,7 @@ FROM python:3-slim as build
 LABEL HARI KARTHIGASU <hariprasad.karthigasu@gmail.com>
 
 WORKDIR /app
-COPY requirements.txt titanic-ui.py /app/
+COPY requirements.txt todo-ui.py /app/
 
 RUN pip3 install --upgrade pip && \
     pip3 install -r ./requirements.txt
