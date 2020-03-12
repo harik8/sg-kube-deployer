@@ -8,9 +8,9 @@ pipeline {
     agent {
     kubernetes {
       	cloud 'kubernetes'
-      	label 'titanic-ui'
+      	label 'todo-ui'
       	defaultContainer 'jnlp'
-      	yamlFile 'docker/titanic-ui/pod.yaml'
+      	yamlFile 'docker/todo-ui/pod.yaml'
       }
     }
 
@@ -20,7 +20,7 @@ pipeline {
                 container(name: 'kaniko', shell: '/busybox/sh') {
                      withEnv(['PATH+EXTRA=/busybox:/kaniko']) {
                       sh """#!/busybox/sh
-                        /kaniko/executor --context=docker/titanic-ui/ --destination $registry:$tag
+                        /kaniko/executor --context=docker/todo-ui/ --destination $registry:$tag
                       """
                      }
                 }

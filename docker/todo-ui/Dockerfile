@@ -12,9 +12,9 @@ FROM gcr.io/distroless/python3:debug
 WORKDIR /app
 
 ENV PYTHONPATH=/usr/local/lib/python3.8/site-packages
-EXPOSE 9038
+EXPOSE 8080
 
 COPY --from=build /app /app
 COPY --from=build /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
 
-CMD ["titanic-ui.py"]
+CMD ["todo-ui.py"]
