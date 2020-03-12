@@ -37,8 +37,8 @@ You can access the GUI from URL given below.
 
 # Service URLs
 
-- [Jenkins] (https://jenkins.hari-karthigasu.dev/)
-- [Todo GUI] (https://todo.hari-karthigasu.dev/ui)
+- [Jenkins](https://jenkins.hari-karthigasu.dev/)
+- [Todo GUI](https://todo.hari-karthigasu.dev/ui)
 
 # Known Issues
 
