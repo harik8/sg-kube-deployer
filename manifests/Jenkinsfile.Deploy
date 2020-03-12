@@ -1,21 +1,23 @@
 #!/usr/bin/env groovy
 
+String module = env.JOB_NAME.split('/')[1].toLowerCase()
+
 pipeline {
     agent {
     kubernetes {
       	cloud 'kubernetes'
       	label 'todo'
       	defaultContainer 'jnlp'
-      	yamlFile 'pod-deploy.yaml'
+      	yamlFile 'pod.yaml'
       }
     }
 
     stages {
         stage("deploy") {
             steps {
-                container('kubeclt') {
+                container('kubectl') {
 			            sh """
-			                kubectl apply -f .
+			                kubectl apply -f $module/
 			            """
                      }
                 }
