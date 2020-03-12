@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 help:
 	@echo "============================================"
-	@echo "# 	HELP make <target>	          		  #"
+	@echo "# 	   	  HELP make <target>	          #"
 	@echo "============================================"
 	@echo "#  deploy       	 Create cluster   	   	   "
 	@echo "#  destroy      	 Destroy cluster  	   	   "
@@ -31,8 +31,8 @@ deploy:
 	bash -c "helm install mongodb stable/mongodb -n mongodb"
 	bash -c "helm install jenkins charts/jenkins-operator/ -n jenkins"
 	bash -c "helm install nginx stable/nginx-ingress -f charts/nginx-ingress/values-nginx.yaml -n nginx"
-	bash -c "export MONGODB_ROOT_PASSWORD=$$(kubectl get secret --namespace mongodb mongodb -o jsonpath="{.data.mongodb-root-password}" | base64 --decode)"
-	bash -c	"kubectl create secret generic mongo-cred --from-literal=MONGO_PASSWORD=$${MONGODB_ROOT_PASSWORD} -n mongodb"
+	bash -c "export MONGODB_ROOT_PASSWORD=$$(kubectl get secret --namespace mongodb mongodb -o jsonpath="{.data.mongodb-root-password}" | base64 --decode) &&\
+			kubectl create secret generic mongo-cred --from-literal=MONGO_PASSWORD=$${MONGODB_ROOT_PASSWORD} -n todo"
 	@echo "==============================================================================================================================================================="
 	@echo "# 			                                    CLUSTER HAS INITIATED SUCCESSFULLY		                                                     				 #"
 	@echo "==============================================================================================================================================================="

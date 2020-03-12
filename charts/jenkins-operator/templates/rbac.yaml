@@ -21,6 +21,7 @@ rules:
   - get
   - list
   - watch
+  - create
 - apiGroups:
   - ""
   resources:
@@ -54,6 +55,7 @@ rules:
   - list
   - watch
   - get
+  - create
 - apiGroups:
   - "extensions"
   resources:
