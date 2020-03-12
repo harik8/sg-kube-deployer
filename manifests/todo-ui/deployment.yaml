@@ -5,6 +5,7 @@ metadata:
   labels:
     app: todo-ui
   name: todo-ui
+  namespace: todo
 spec:
   replicas: 1
   selector:
@@ -18,7 +19,7 @@ spec:
         app: todo-ui
     spec:
       containers:
-      - image: harik8/todo-ui:v1.0.2
+      - image: harik8/todo-ui:latest
         name: todo-ui
         resources:
           requests:
