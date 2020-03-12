@@ -47,7 +47,7 @@ pipelineJob('Apps/Todo-UI/release') {
                     branches('*/master')
                 }
             }
-            scriptPath('todo-ui/Jenkinsfile.Release')
+            scriptPath('docker/todo-ui/Jenkinsfile.Release')
         }
     }
 }
