@@ -1,4 +1,4 @@
-pipelineJob('Docker/Todo/release') {
+pipelineJob('Apps/Todo/release') {
     displayName('release')
 
     logRotator {
@@ -25,7 +25,7 @@ pipelineJob('Docker/Todo/release') {
     }
 }
 
-pipelineJob('Docker/Todo-UI/release') {
+pipelineJob('Apps/Todo-UI/release') {
     displayName('release')
 
     logRotator {

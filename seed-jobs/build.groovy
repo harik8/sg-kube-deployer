@@ -1,21 +1,21 @@
 #!/usr/bin/env groovy
 
-folder('Docker') {
-    displayName('Docker')
+folder('Apps') {
+    displayName('Apps')
     description('Docker Builds')
 }
 
-folder('Docker/Todo') {
+folder('Apps/Todo') {
     displayName('Todo')
     description('Todo Build')
 }
 
-folder('Docker/Todo-UI') {
+folder('Apps/Todo-UI') {
     displayName('Todo-UI')
     description('Todo-UI Build')
 }
 
-multibranchPipelineJob('Docker/Todo/todo') {
+multibranchPipelineJob('Apps/Todo/todo') {
     branchSources {
         git {
             id('00001')
@@ -34,7 +34,7 @@ multibranchPipelineJob('Docker/Todo/todo') {
     }
 }
 
-multibranchPipelineJob('Docker/Todo-UI/todo-ui') {
+multibranchPipelineJob('Apps/Todo-UI/todo-ui') {
     branchSources {
         git {
             id('00002')
