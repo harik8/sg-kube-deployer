@@ -25,7 +25,7 @@ It deploys cluster and cluster resources.
  
 It destroys cluster and cluster resources.
 
-# Addition Modules
+# Modules
 
 - [terraform-eks](https://github.com/harik8/terraform-eks.git)
 - [todo-list-service](https://github.com/harik8/todo-list-service.git)
