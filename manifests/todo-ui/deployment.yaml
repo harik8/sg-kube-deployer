@@ -1,33 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
   labels:
-    app: todo
-  name: todo
+    app: todo-ui
+  name: todo-ui
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: todo
+      app: todo-ui
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        app: todo
+        app: todo-ui
     spec:
       containers:
-      - image: harikarthi/todo:latest
-        name: todo
+      - image: harik8/todo-ui:v1.0.2
+        name: todo-ui
         resources:
           requests:
             memory: 256Mi
-            cpu: 100m
+            cpu: 200m
           limits:
             memory: 512Mi
-            cpu: 200m
-        port:
-        - containerPort: 8080
+            cpu: 400m
         envFrom:
         - configMapRef:
             name: todo-conf

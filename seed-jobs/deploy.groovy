@@ -11,12 +11,12 @@ pipelineJob('Apps/Todo/deploy') {
             scm {
                 git {
                     remote {
-                        url('https://gitlab.com/harik8/todo-list-service.git')
+                        url('https://gitlab.com/harik8/sg-kube-deployer.git')
                     }
                     branches('*/master')
                 }
             }
-            scriptPath('Jenkinsfile.Deploy')
+            scriptPath('manifests/Jenkinsfile.Deploy')
         }
     }
 }

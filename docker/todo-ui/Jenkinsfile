@@ -1,0 +1,30 @@
+// titanic-ui
+
+String image    = env.JOB_NAME.split('/')[1].toLowerCase()
+String registry = "harik8/$image"
+String tag      = "latest"
+
+pipeline {
+    agent {
+    kubernetes {
+      	cloud 'kubernetes'
+      	label 'titanic-ui'
+      	defaultContainer 'jnlp'
+      	yamlFile 'docker/titanic-ui/pod.yaml'
+      }
+    }
+
+    stages {
+        stage("publish") {
+            steps {
+                container(name: 'kaniko', shell: '/busybox/sh') {
+                     withEnv(['PATH+EXTRA=/busybox:/kaniko']) {
+                      sh """#!/busybox/sh
+                        /kaniko/executor --context=docker/titanic-ui/ --destination $registry:$tag
+                      """
+                     }
+                }
+            }
+        }
+    }
+}

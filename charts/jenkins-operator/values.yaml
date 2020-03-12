@@ -56,8 +56,8 @@ jenkins:
       description: "Todo Repository"
       repositoryBranch: master
       repositoryUrl: https://gitlab.com/harik8/sg-kube-deployer.git
-      credentialType: usernamePassword
-      credentialID: stash-credentials
+      # credentialType: usernamePassword
+      # credentialID: stash-credentials
           
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
