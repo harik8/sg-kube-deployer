@@ -43,7 +43,7 @@ multibranchPipelineJob('Apps/Todo-UI/todo-ui') {
     }
     factory {
         workflowBranchProjectFactory {
-            scriptPath('todo-ui/Jenkinsfile')
+            scriptPath('docker/todo-ui/Jenkinsfile')
         }
     }
     orphanedItemStrategy {
