@@ -19,7 +19,7 @@ multibranchPipelineJob('Apps/Todo/todo') {
     branchSources {
         git {
             id('00001')
-            remote('https://gitlab.com/harik8/todo-list-service.git')
+            remote('https://github.com/harik8/todo-list-service.git')
         }
     }
     factory {
@@ -38,7 +38,7 @@ multibranchPipelineJob('Apps/Todo-UI/todo-ui') {
     branchSources {
         git {
             id('00002')
-            remote('https://gitlab.com/harik8/sg-kube-deployer.git')
+            remote('https://github.com/harik8/sg-kube-deployer.git')
         }
     }
     factory {
