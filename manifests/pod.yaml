@@ -18,6 +18,7 @@ spec:
     command:
     - cat
     tty: true
+    serviceAccount: jenkins-operator-todo
     resources:
       limits:
         cpu: 200m
