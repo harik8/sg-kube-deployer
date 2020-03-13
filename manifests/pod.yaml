@@ -6,6 +6,8 @@ spec:
   containers:
   - name: jnlp
     image: jenkins/jnlp-slave:3.35-5-alpine
+    serviceAccount: jenkins-operator-todo
+    serviceAccountName: jenkins-operator-todo
     resources:
       limits:
         cpu: 200m
@@ -19,6 +21,7 @@ spec:
     - cat
     tty: true
     serviceAccount: jenkins-operator-todo
+    serviceAccountName: jenkins-operator-todo
     resources:
       limits:
         cpu: 200m
