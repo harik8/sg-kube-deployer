@@ -40,11 +40,6 @@ You can access the GUI from URL given below.
 - [Jenkins](https://jenkins.hari-karthigasu.dev/)
 - [Todo GUI](https://todo.hari-karthigasu.dev/ui)
 
-# Known Issues
-
-- Jenkins jobs would fail at first run, saying "Authentication Error"
-    - Work Around : Copy and paste relevant URL from git to job configuration and re-run the job.
-
 # Recommadations
 
 - Deploy [external-dns](https://github.com/kubernetes-sigs/external-dns.git) to handle R53 entries once an ingress created.
