@@ -11,7 +11,7 @@ pipelineJob('Apps/Todo/deploy') {
             scm {
                 git {
                     remote {
-                        url('https://gitlab.com/harik8/sg-kube-deployer.git')
+                        url('https://github.com/harik8/sg-kube-deployer.git')
                     }
                     branches('*/master')
                 }
@@ -34,7 +34,7 @@ pipelineJob('Apps/Todo-UI/deploy') {
             scm {
                 git {
                     remote {
-                        url('https://gitlab.com/harik8/sg-kube-deployer.git')
+                        url('https://github.com/harik8/sg-kube-deployer.git')
                     }
                     branches('*/master')
                 }

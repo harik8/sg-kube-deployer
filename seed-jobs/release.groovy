@@ -15,7 +15,7 @@ pipelineJob('Apps/Todo/release') {
             scm {
                 git {
                     remote {
-                        url('https://gitlab.com/harik8/todo-list-service.git')
+                        url('https://github.com/harik8/todo-list-service.git')
                     }
                     branches('*/master')
                 }
@@ -42,7 +42,7 @@ pipelineJob('Apps/Todo-UI/release') {
             scm {
                 git {
                     remote {
-                        url('https://gitlab.com/harik8/sg-kube-deployer.git')
+                        url('https://github.com/harik8/sg-kube-deployer.git')
                     }
                     branches('*/master')
                 }
