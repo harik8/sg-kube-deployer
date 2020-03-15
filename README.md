@@ -6,6 +6,7 @@ Platform is running top of AWS EKS and it uses Jenkins for CI/CD.
 # Prerequisite
 
 - terraform
+- helm v3
 - awscli
 - kubectl
 

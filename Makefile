@@ -12,12 +12,6 @@ help:
 
 deploy:
 	@echo "==============================================================================================================================================================="
-	@echo "# 			                                        CLUSTER IS INITIATING........					                             							 #"
-	@echo "==============================================================================================================================================================="
-	bash -c "git clone https://github.com/harik8/terraform-eks.git"
-	bash -c "cd terraform-eks && terraform init && terraform apply --auto-approve=true"
-	bash -c "aws eks update-kubeconfig --name dev-eks --region us-west-2"
-	@echo "==============================================================================================================================================================="
 	@echo "# 			                                    STARTED K8s OBJECT CREATION........					                             							 #"
 	@echo "==============================================================================================================================================================="
 	bash -c "kubectl create ns jenkins"
@@ -44,7 +38,6 @@ destroy:
 	bash -c "helm uninstall mongodb -n mongodb"
 	bash -c "helm uninstall jenkins -n jenkins"
 	bash -c "helm uninstall nginx -n nginx"
-	bash -c "cd terraform-eks && terraform destroy --auto-approve"
 	@echo "==============================================================================================================================================================="
-	@echo "# 			                               CLUSTER HAS BEEN DESTROYED SUCCESSFULLY		                                                     				 #"
+	@echo "# 			                               KUBE RESOURCES DESTROYED SUCCESSFULLY		                                                     				 #"
 	@echo "==============================================================================================================================================================="
