@@ -15,7 +15,7 @@ deploy:
 	@echo "# 			                                    STARTED K8s OBJECT CREATION........					                             							 #"
 	@echo "==============================================================================================================================================================="
 	bash -c "kubectl apply -f kube-resources/ns.yaml"
-	bash -c "kubectl create secret docker-registry registry-cred --docker-server=$${DOKCER_HOST} --docker-username=$${DOCKER_USER} --docker-password=$${DOCKER_PASSWORD} -n jenkins"
+	bash -c "kubectl create secret docker-registry registry-cred --docker-server=$${DOCKER_HOST} --docker-username=$${DOCKER_USER} --docker-password=$${DOCKER_PASSWORD} -n jenkins"
 	@echo "==============================================================================================================================================================="
 	@echo "# 			                                    STARTED HELM OBJECT CREATION........					                             						  #"
 	@echo "==============================================================================================================================================================="
